@@ -1,6 +1,4 @@
 ﻿  P2P.cpp
-  코드를 생성하고 있습니다.
-  Previous IPDB not found, fall back to full compilation.
-  All 44 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  코드를 생성했습니다.
-  UDP_Test.vcxproj -> C:\Users\Jisu_computer\source\repos\UDP_Test\x64\Release\UDP_Test.exe
+C:\Users\Jisu_computer\source\repos\UDP_Test\UDP_Test\P2P.cpp(108,48): error C2248: 'CNetServerSerializationBuf::ChunkFreeForcibly': private 멤버('CNetServerSerializationBuf' 클래스에서 선언)에 액세스할 수 없습니다.
+C:\Users\Jisu_computer\Desktop\Common\NetServerSerializeBuffer.h(70): message : 'CNetServerSerializationBuf::ChunkFreeForcibly' 선언을 참조하십시오.
+C:\Users\Jisu_computer\source\repos\UDP_Test\UDP_Test\P2P.h(6): message : 'CNetServerSerializationBuf' 선언을 참조하십시오.

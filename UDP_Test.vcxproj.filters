@@ -39,9 +39,15 @@
     <ClCompile Include="..\..\..\..\Desktop\Common\Ringbuffer.cpp">
       <Filter>소스 파일\lib</Filter>
     </ClCompile>
+    <ClCompile Include="P2PSerializeBuffer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="P2P.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="P2PSerializeBuffer.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

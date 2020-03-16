@@ -1,6 +1,6 @@
 #include "PreCompile.h"
 #include "ServerCommon.h"
-#include "NetServerSerializeBuffer.h"
+#include "P2PSerializeBuffer.h"
 #include "P2P.h"
 
 CP2P::CP2P() : m_UserNumber(0), m_Socket(INVALID_SOCKET)
@@ -49,20 +49,19 @@ void CP2P::HolePunching(const char *IP, const WORD Port)
 		return;
 	
 	// 특수한 패킷을 하나 보내어 이 패킷이 접속 패킷을 알림
-	CNetServerSerializationBuf& HolePuchingPacket = *CNetServerSerializationBuf::Alloc();
-	char HolePunchingItem = 1;
+	CP2PSerializationBuf& HolePuchingPacket = *CP2PSerializationBuf::Alloc();
 
-	HolePuchingPacket << HolePunchingItem;
+	HolePuchingPacket.m_pSerializeBuffer[df_IS_CONNECT_LOCATION] = 1;
 
 	SendPacket(IP, Port, &HolePuchingPacket);
 }
 
-void CP2P::SendPacket(UINT64 UserID, CNetServerSerializationBuf* pPacket)
+void CP2P::SendPacket(UINT64 UserID, CP2PSerializationBuf* pPacket)
 {
 	
 }
 
-void CP2P::SendPacket(const char *IP, const WORD Port, CNetServerSerializationBuf* pPacket)
+void CP2P::SendPacket(const char *IP, const WORD Port, CP2PSerializationBuf* pPacket)
 {
 	
 }
@@ -104,8 +103,11 @@ void CP2P::ConnectOtherUser(const char* IP[3], const WORD Port[3])
 
 UINT CP2P::Worker()
 {
+	// 받아온 패킷이 접속 패킷일 경우가 존재하기 때문에
+	// HolePuchingPacket.m_pSerializeBuffer[df_IS_CONNECT_LOCATION] 가 1인지 확인해보고
+	// 그에 따른 분기를 나눌것
 
-
+	CP2PSerializationBuf::ChunkFreeForcibly();
 	return 0;
 }
 

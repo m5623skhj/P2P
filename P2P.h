@@ -3,7 +3,7 @@
 #include <map>
 #include <stack>
 
-class CNetServerSerializationBuf;
+class CP2PSerializationBuf;
 
 class CP2P
 {
@@ -20,11 +20,11 @@ protected :
 
 	virtual void OnError(st_Error* OutError) = 0;
 
-	virtual void OnRecv(UINT64 UserID, CNetServerSerializationBuf *pPacket) = 0;
+	virtual void OnRecv(UINT64 UserID, CP2PSerializationBuf *pPacket) = 0;
 	virtual void OnRecv(UINT64 UserID, int SendSize) = 0;
 
-	void SendPacket(UINT64 UserID, CNetServerSerializationBuf*pPacket);
-	void SendPacket(const char *IP, const WORD Port, CNetServerSerializationBuf *pPacket);
+	void SendPacket(UINT64 UserID, CP2PSerializationBuf*pPacket);
+	void SendPacket(const char *IP, const WORD Port, CP2PSerializationBuf *pPacket);
 
 	// 주어진 IP와 Port 번호로 통신을 시도하며,
 	// 사용자가 보낸 쌍의 순서로 통신을 시도합니다.
