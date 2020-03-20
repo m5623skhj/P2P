@@ -1,4 +1,7 @@
-﻿  P2P.cpp
-C:\Users\Jisu_computer\source\repos\UDP_Test\UDP_Test\P2P.cpp(108,48): error C2248: 'CNetServerSerializationBuf::ChunkFreeForcibly': private 멤버('CNetServerSerializationBuf' 클래스에서 선언)에 액세스할 수 없습니다.
-C:\Users\Jisu_computer\Desktop\Common\NetServerSerializeBuffer.h(70): message : 'CNetServerSerializationBuf::ChunkFreeForcibly' 선언을 참조하십시오.
-C:\Users\Jisu_computer\source\repos\UDP_Test\UDP_Test\P2P.h(6): message : 'CNetServerSerializationBuf' 선언을 참조하십시오.
+﻿  UDP_Test.cpp
+  코드를 생성하고 있습니다.
+  16 of 224 functions ( 7.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    3 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  UDP_Test.vcxproj -> C:\Users\Jisu_computer\source\repos\UDP_Test\x64\Release\UDP_Test.exe

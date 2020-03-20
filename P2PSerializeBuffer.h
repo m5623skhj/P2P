@@ -1,8 +1,8 @@
 #pragma once
 #include "LockFreeMemoryPool.h"
 
-#define dfDEFAULTSIZE		512
-#define BUFFFER_MAX			10000
+#define dfDEFAULTSIZE				 512
+#define BUFFFER_MAX					 10000
 
 // Header 의 크기를 결정함
 // 프로그램마다 유동적임
@@ -11,13 +11,19 @@
 // WritePtrSetHeader() 와 WritePtrSetLast() 를 사용함으로써
 // 헤더 시작 부분과 페이로드 마지막 부분으로 포인터를 옮겨줘야 함
 // 혹은 GetLastWrite() 를 사용하여 사용자가 쓴 마지막 값을 사이즈로 넘겨줌
-#define df_HEADER_SIZE		6
+#define df_HEADER_SIZE				 8
 
-#define dfNUM_OF_NETBUF_CHUNK		10
+#define dfNUM_OF_NETBUF_CHUNK		 10
 
 #define df_RAND_CODE_LOCATION		 3
 #define df_CHECKSUM_CODE_LOCATION	 4
-#define df_IS_CONNECT_LOCATION		 5
+#define df_CONNECT_LOCATION			 5
+#define df_TIME_STAMP				 6
+
+#define dfREQ_CONNECT				 1
+#define dfRES_CONNECT				 2
+#define dfREQ_NORMAL				 3
+#define dfRES_NORMAL				 4
 
 class CP2P;
 

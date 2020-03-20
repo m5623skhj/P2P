@@ -27,9 +27,6 @@
     <ClCompile Include="..\..\..\..\Desktop\Common\Log.cpp">
       <Filter>소스 파일\lib</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\Common\NetServerSerializeBuffer.cpp">
-      <Filter>소스 파일\lib</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\Desktop\Common\Parse.cpp">
       <Filter>소스 파일\lib</Filter>
     </ClCompile>
@@ -42,12 +39,18 @@
     <ClCompile Include="P2PSerializeBuffer.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="P2PTester.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="P2P.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="P2PSerializeBuffer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="P2PTester.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
